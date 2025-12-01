@@ -1,0 +1,227 @@
+/* BASE */
+
+body {
+  margin: 0;
+  background: #F8F8F8;
+  font-family: "Libre Franklin", sans-serif;
+  color: #4F4F4D;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #E2E2E2;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+}
+
+.nav-title {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #545151;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  border-bottom-color: #9B2915;
+  color: #000000;
+}
+
+.nav-links a.active {
+  border-bottom-color: #9B2915;
+}
+
+/* SCROLLY LAYOUT */
+
+#scrolly {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: block;
+}
+
+#graphic {
+  position: sticky;
+  top: 18vh;
+  text-align: center;
+  z-index: 2;
+  padding-bottom: 40px;
+}
+
+#sections {
+  position: relative;
+  margin-top: 40px;
+}
+
+.headline {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dek {
+  font-size: 1.05rem;
+  color: #545151;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+#speaker-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#silhouette {
+  width: 180px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#speaker-role {
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #4F4F4D;
+}
+
+#speaker-time {
+  font-size: 0.9rem;
+  color: #7a7a79;
+}
+
+#quote-box {
+  margin-top: 22px;
+  background: #ffffff;
+  padding: 20px 22px;
+  border-radius: 14px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-left: 4px solid #9B2915;
+}
+
+#quote-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4F4F4D;
+  margin: 0;
+}
+
+#context-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #7a7a79;
+  margin: 0 0 10px;
+}
+
+
+#sections .step {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 22px 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-left: 4px solid #E9B872;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+}
+
+#sections .step h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a7a79;
+}
+
+/* STEPS */
+#sections .step {
+  height: 90vh;      /* distance between “beats” in the story */
+  margin: 0;
+  opacity: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* PULSE LINE (BACKGROUND) */
+
+#pulse-background {
+  position: fixed;
+  top: 0;           /* full background */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#pulse-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  #scrolly {
+    display: block;
+    margin-top: 24px;
+  }
+
+  #graphic {
+    position: relative;
+    top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  #sections .step {
+    margin-bottom: 22px;
+  }
+
+  .headline {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .headline {
+    font-size: 1.7rem;
+  }
+
+  #silhouette {
+    width: 150px;
+  }
+
+  #quote-box {
+    padding: 16px 18px;
+  }
+
+  #sections .step {
+    padding: 18px 18px 16px;
+  }
+}

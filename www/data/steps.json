@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "step": 1,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.00,
+    "context": "The President opens the morning conference with a calm greeting, setting a measured tone before any mention of the floods.",
+    "quote": "Muy buenos días. Vamos a iniciar."
+  },
+  {
+    "id": 2,
+    "step": 2,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": -0.05,
+    "context": "She announces that the entire session will be devoted to the flooding emergency across five states, signaling the gravity of the day.",
+    "quote": "Hoy dedicaremos toda la conferencia a informar sobre las afectaciones por las lluvias."
+  },
+  {
+    "id": 3,
+    "step": 3,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.25,
+    "context": "The President introduces the lineup of federal officials who will report on damage, rescues, and response efforts.",
+    "quote": "Nos acompañan las y los titulares que encabezan los trabajos de apoyo."
+  },
+  {
+    "id": 4,
+    "step": 4,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.80,
+    "context": "Protección Civil opens with a grim tally of deaths and missing persons across Veracruz, Puebla, Hidalgo, Querétaro, and San Luis Potosí.",
+    "quote": "Registramos personas fallecidas y no localizadas en Veracruz, Puebla, Hidalgo, Querétaro y San Luis Potosí."
+  },
+  {
+    "id": 5,
+    "step": 5,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.60,
+    "context": "She explains that many communities remain cut off, with roads turned into rivers and access still impossible in some areas.",
+    "quote": "Hay municipios incomunicados y zonas donde aún no se puede entrar."
+  },
+  {
+    "id": 6,
+    "step": 6,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": 0.30,
+    "context": "SEDENA takes over, describing the activation of Plan DN-III-E and the large deployment of troops and resources.",
+    "quote": "Desde la madrugada se aplicó el Plan DN-III-E con más de siete mil elementos desplegados."
+  },
+  {
+    "id": 7,
+    "step": 7,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": 0.25,
+    "context": "The Army lists rescues, airlifts, mobile kitchens and emergency supplies, giving the disaster a precise operational frame.",
+    "quote": "Hemos realizado rescates, distribución de alimentos y apoyo en albergues temporales."
+  },
+  {
+    "id": 8,
+    "step": 8,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": 0.45,
+    "context": "They explain how Poza Rica and Álamo were divided into sectors so teams could move block by block through flooded neighborhoods.",
+    "quote": "Dividimos la ciudad en sectores para acelerar los rescates."
+  },
+  {
+    "id": 9,
+    "step": 9,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.20,
+    "context": "The Navy presents its own deployment: marines, aircraft, medical teams, and boats working across four states.",
+    "quote": "La Marina trabaja en saneamiento de colonias y evacuaciones médicas."
+  },
+  {
+    "id": 10,
+    "step": 10,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": 0.85,
+    "context": "SEMAR details debris removal, clearing roads and delivering water and food to stranded communities.",
+    "quote": "Apoyamos con maquinaria, limpieza y retiro de escombros."
+  },
+  {
+    "id": 11,
+    "step": 11,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.40,
+    "context": "Infrastructure officials show maps of landslides, road cuts and damaged bridges across the federal road network.",
+    "quote": "Tenemos 132 interrupciones en la red carretera federal."
+  },
+  {
+    "id": 12,
+    "step": 12,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.80,
+    "context": "They describe stretches of highway ripped away by swollen rivers and hillside collapses, even as most routes are now reopened.",
+    "quote": "Hay tramos donde el pavimento fue totalmente levantado por el agua."
+  },
+  {
+    "id": 13,
+    "step": 13,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": 0.75,
+    "context": "CFE reports that electricity has been restored to over 80% of affected users, offering a rare note of progress.",
+    "quote": "Hemos restablecido más del 80% del servicio eléctrico."
+  },
+  {
+    "id": 14,
+    "step": 14,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.10,
+    "context": "Some remote communities remain without power because crews cannot reach them with vehicles and must walk in on foot.",
+    "quote": "En ciertas zonas, sólo podemos acceder caminando con cuadrillas portátiles."
+  },
+  {
+    "id": 15,
+    "step": 15,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.05,
+    "context": "Health authorities describe hundreds of medical brigades providing care, vaccines, and basic medicines in flood-hit areas.",
+    "quote": "Realizamos acciones de vacunación, control de vectores y atención médica móvil."
+  },
+  {
+    "id": 16,
+    "step": 16,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.20,
+    "context": "They warn about dengue risks and stagnant water, outlining vector control measures and long-term health monitoring.",
+    "quote": "Colocamos ovitrampas y realizamos nebulización en zonas críticas."
+  },
+  {
+    "id": 17,
+    "step": 17,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.50,
+    "context": "The governor of Veracruz reports massive human impact: hundreds of thousands affected, dozens of shelters, and widespread flooding.",
+    "quote": "Tenemos alrededor de 300 mil personas afectadas en el estado."
+  },
+  {
+    "id": 18,
+    "step": 18,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.95,
+    "context": "Puebla’s governor lists deaths, missing persons and destroyed infrastructure, giving the disaster a human face.",
+    "quote": "Hemos registrado trece personas fallecidas y cuatro no localizadas."
+  },
+  {
+    "id": 19,
+    "step": 19,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.98,
+    "context": "Hidalgo reports dozens of roads cut, bridges collapsed and many people still unaccounted for.",
+    "quote": "Hay alrededor de 21 fallecidos y 43 personas aún no localizadas."
+  },
+  {
+    "id": 20,
+    "step": 20,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.35,
+    "context": "Querétaro describes entire communities evacuated and key bridges washed away by swollen rivers.",
+    "quote": "Tuvimos que evacuar poblaciones completas durante la noche."
+  },
+  {
+    "id": 21,
+    "step": 21,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": -0.10,
+    "context": "San Luis Potosí reports significant material damage but, unlike other states, no reported deaths so far.",
+    "quote": "No tenemos decesos que lamentar, pero sí daños importantes."
+  },
+  {
+    "id": 22,
+    "step": 22,
+    "speaker": "journalist",
+    "silhouette": "img/journalist.png",
+    "sentiment": 0.14,
+    "context": "After a long sequence of official reports, a journalist finally intervenes, asking what really happened.",
+    "quote": "Presidenta, ¿qué fue lo que pasó realmente?"
+  },
+  {
+    "id": 23,
+    "step": 23,
+    "speaker": "journalist",
+    "silhouette": "img/journalist.png",
+    "sentiment": -0.15,
+    "context": "Another question probes whether early warning systems failed and if lives could have been saved with better prevention.",
+    "quote": "¿Fallaron los sistemas de prevención? ¿Se alertó a tiempo?"
+  },
+  {
+    "id": 24,
+    "step": 24,
+    "speaker": "official",
+    "silhouette": "img/official.png",
+    "sentiment": 0.20,
+    "context": "Navy and meteorological officials respond, stressing unprecedented rainfall and saturated rivers to explain the scale of the disaster.",
+    "quote": "La intensidad de la lluvia fue excepcional, arriba de los registros históricos."
+  },
+  {
+    "id": 25,
+    "step": 25,
+    "speaker": "journalist",
+    "silhouette": "img/journalist.png",
+    "sentiment": -0.50,
+    "context": "A journalist raises the previous day’s confrontation in Poza Rica, where residents angrily confronted the President.",
+    "quote": "Ayer hubo reclamos en Poza Rica por la tardanza de los apoyos."
+  },
+  {
+    "id": 26,
+    "step": 26,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.10,
+    "context": "The President acknowledges people’s anger and anxiety, emphasizing that more help is being sent and that no one will be abandoned.",
+    "quote": "Entendemos la preocupación. Nadie quedará sin apoyo."
+  },
+  {
+    "id": 27,
+    "step": 27,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.60,
+    "context": "Questions turn to criticism from business elites and opposition figures; politics briefly intrudes into the emergency briefing.",
+    "quote": "Es momento de unidad, no de aprovecharse políticamente."
+  },
+  {
+    "id": 28,
+    "step": 28,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.65,
+    "context": "She reframes the narrative, highlighting the generosity and solidarity of ordinary people over partisan attacks.",
+    "quote": "La generosidad del pueblo es más fuerte que cualquier discordia."
+  },
+  {
+    "id": 29,
+    "step": 29,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.20,
+    "context": "The President lays out next steps: supervision tours, reconstruction plans and the use of federal resources for recovery.",
+    "quote": "Hoy mismo iremos a Querétaro e Hidalgo para supervisar los trabajos."
+  },
+  {
+    "id": 30,
+    "step": 30,
+    "speaker": "president",
+    "silhouette": "img/president.png",
+    "sentiment": 0.30,
+    "context": "She closes the conference with a promise of continued work until all affected communities can recover from the floods.",
+    "quote": "Seguiremos trabajando sin descanso hasta que todas las comunidades se recuperen."
+  }
+]

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morning Pulse — A Conversation Unfolds</title>
+
+  <!-- Libre Franklin -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Libraries -->
+  <script src="js/d3.v7.js"></script>
+  <script src="js/scrollama.js"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-title">Morning Pulse</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Narrative</a>
+      <a href="/explore.html">Explore</a>
+      <a href="/howto.html">Methods</a>
+    </div>
+  </nav>
+
+  <!-- BACKGROUND PULSE LINE -->
+  <div id="pulse-background">
+    <svg id="pulse-svg"></svg>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <main id="scrolly">
+
+    <!-- FIXED VISUAL AREA -->
+    <section id="graphic">
+
+      <h1 class="headline">Inside the Dialogue of a Morning Press Conference</h1>
+      <p class="dek">
+        A moment-by-moment reconstruction of a single press conference, 
+        tracing how the tone shifts as the President, officials, 
+        and journalists speak.
+      </p>
+      <p class="dek">
+        Scroll down to follow the conversation unfold.
+      </p>
+
+      <div id="speaker-wrapper">
+        <img id="silhouette" src="img/president.png" alt="Speaker silhouette" />
+        <div id="speaker-meta">
+          <p id="speaker-role">President</p>
+          <p id="speaker-time">0m 00s</p>
+        </div>
+      </div>
+
+      <div id="quote-box">
+        <p id="context-text" class="context-text">Loading…</p>
+        <p id="quote-text">“ ”</p>
+      </div>
+
+    </section>
+    <section id="sections">
+    </section>
+
+  </main>
+
+  <!-- Main script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

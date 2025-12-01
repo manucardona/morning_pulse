@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Debug</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header.site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .site-brand {
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    #explore {
+      padding: 24px 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .explore-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #e2e2e2;
+      padding-bottom: 16px;
+    }
+
+    .explore-title {
+      margin: 0 0 4px;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .explore-subtitle {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      max-width: 480px;
+    }
+
+    .explore-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.9rem;
+    }
+
+    #explore-conference-select {
+      min-width: 260px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #d0d0d0;
+      font-size: 0.9rem;
+    }
+
+    .explore-layout {
+      display: grid;
+      grid-template-columns: minmax(230px, 280px) 1fr;
+      gap: 24px;
+    }
+
+    .explore-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 8px;
+    }
+
+    .meta-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ececec;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .explore-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .chart-container {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #ececec;
+      padding: 8px;
+      min-height: 180px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-brand">Morning Pulse – DEBUG</div>
+  </header>
+
+  <section id="explore">
+    <header class="explore-header">
+      <div class="explore-title-block">
+        <h1 class="explore-title">Explore the Mañaneras (Debug)</h1>
+        <p class="explore-subtitle">
+          If you can read this, HTML & CSS are loading. If the dropdown fills and charts show text, JS is running.
+        </p>
+      </div>
+      <div class="explore-controls">
+        <label for="explore-conference-select">Conference</label>
+        <select id="explore-conference-select"></select>
+      </div>
+    </header>
+
+    <div class="explore-layout">
+      <aside class="explore-sidebar">
+        <section>
+          <h2 class="panel-title">Conference details</h2>
+          <div id="explore-meta" class="meta-card"></div>
+        </section>
+      </aside>
+
+      <main class="explore-main">
+        <section>
+          <h2 class="panel-title">Sentiment over time</h2>
+          <div id="sentiment-chart" class="chart-container"></div>
+        </section>
+        <section>
+          <h2 class="panel-title">States mentioned</h2>
+          <div id="states-chart" class="chart-container"></div>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <!-- 1) D3 from CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- 2) Inline mock data & explore logic -->
+  <script>
+    console.log("Script loaded: starting debug…");
+
+    // ---- MOCK DATA ----
+    const conferences = [
+      {
+        id: "2024-01-05",
+        date: "2024-01-05",
+        title: "Mañanera del 5 de enero",
+        location_state: "CDMX",
+        interventions: [
+          {
+            idx: 0,
+            timestamp_minute: 0,
+            actor_role: "president",
+            actor_name: "AMLO",
+            sentiment: 0.3,
+            topics: ["economy", "security"],
+            text: "Buenos días. Hoy vamos a hablar de la economía y la seguridad.",
+            is_interruption: false,
+            is_followup: false,
+            mentioned_states: ["Tabasco"]
+          },
+          {
+            idx: 1,
+            timestamp_minute: 4,
+            actor_role: "journalist",
+            actor_name: "Jorge Ramos",
+            sentiment: -0.2,
+            topics: ["security", "human rights"],
+            text: "Presidente, ¿qué responde a las críticas sobre derechos humanos?",
+            is_interruption: false,
+            is_followup: false,
+            mentioned_states: []
+          },
+          {
+            idx: 2,
+            timestamp_minute: 8,
+            actor_role: "official",
+            actor_name: "Rosa Icela",
+            sentiment: 0.1,
+            topics: ["security"],
+            text: "La incidencia delictiva mostró una tendencia a la baja.",
+            is_interruption: false,
+            is_followup: false,
+            mentioned_states: ["Guanajuato", "Sonora"]
+          }
+        ]
+      },
+      {
+        id: "2024-01-10",
+        date: "2024-01-10",
+        title: "Mañanera del 10 de enero",
+        location_state: "Nuevo León",
+        interventions: [
+          {
+            idx: 0,
+            timestamp_minute: 0,
+            actor_role: "president",
+            actor_name: "AMLO",
+            sentiment: 0.4,
+            topics: ["infrastructure"],
+            text: "Hoy estamos en Nuevo León para revisar proyectos de infraestructura.",
+            is_interruption: false,
+            is_followup: false,
+            mentioned_states: ["Nuevo León"]
+          },
+          {
+            idx: 1,
+            timestamp_minute: 3,
+            actor_role: "journalist",
+            actor_name: "Ana Soto",
+            sentiment: -0.1,
+            topics: ["water crisis"],
+            text: "¿Qué medidas se tomarán respecto a la crisis de agua?",
+            is_interruption: false,
+            is_followup: false,
+            mentioned_states: ["Nuevo León", "Coahuila"]
+          }
+        ]
+      }
+    ];
+
+    console.log("Mock conferences loaded:", conferences.length);
+
+    // ---- SIMPLE EXPLORE LOGIC ----
+    function initExploreDebug() {
+      console.log("initExploreDebug called");
+
+      if (!Array.isArray(conferences) || conferences.length === 0) {
+        console.error("No conferences array available");
+        return;
+      }
+
+      const select = d3.select("#explore-conference-select");
+      if (select.empty()) {
+        console.error("Could not find #explore-conference-select");
+        return;
+      }
+
+      select
+        .selectAll("option")
+        .data(conferences)
+        .join("option")
+        .attr("value", d => d.id)
+        .text(d => `${d.date} — ${d.title}`);
+
+      const defaultConf = conferences[0];
+      select.property("value", defaultConf.id);
+
+      select.on("change", (event) => {
+        const chosenId = event.target.value;
+        const chosen = conferences.find(c => c.id === chosenId);
+        console.log("Conference changed:", chosenId);
+        if (chosen) renderExploreDebug(chosen);
+      });
+
+      renderExploreDebug(defaultConf);
+    }
+
+    function renderExploreDebug(conf) {
+      console.log("Rendering conference:", conf.id);
+
+      // Meta
+      const meta = d3.select("#explore-meta");
+      meta.html("");
+      meta.append("div").text("Date: " + conf.date);
+      meta.append("div").text("Title: " + conf.title);
+      meta.append("div").text("Location: " + conf.location_state);
+      meta.append("div").text("Interventions: " + conf.interventions.length);
+
+      // Sentiment chart – for debug: just show text list
+      const sent = d3.select("#sentiment-chart");
+      sent.html("");
+      sent.append("div").text("Sentiment values (debug text):");
+      conf.interventions.forEach(intv => {
+        sent.append("div").text(
+          `#${intv.idx} (${intv.actor_role}) – sentiment: ${intv.sentiment}`
+        );
+      });
+
+      // States mentioned – count and show as list
+      const stateCounts = new Map();
+      conf.interventions.forEach(d => {
+        (d.mentioned_states || []).forEach(s => {
+          stateCounts.set(s, (stateCounts.get(s) || 0) + 1);
+        });
+      });
+
+      const states = d3.select("#states-chart");
+      states.html("");
+      if (stateCounts.size === 0) {
+        states.text("No states mentioned in this conference.");
+      } else {
+        states.append("div").text("States mentioned (debug text):");
+        for (const [state, count] of stateCounts.entries()) {
+          states.append("div").text(`${state}: ${count} mentions`);
+        }
+      }
+    }
+
+    // Call directly once the script is parsed
+    initExploreDebug();
+  </script>
+</body>
+</html>
