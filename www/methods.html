@@ -5,11 +5,8 @@
   <title>Morning Pulse – Methods</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Libre Franklin (same family as main narrative) -->
+  <!-- Libre Franklin -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- If you have a global stylesheet, keep this: -->
-  <!-- <link rel="stylesheet" href="main.css" /> -->
 
   <style>
     :root {
@@ -31,7 +28,7 @@
       line-height: 1.5;
     }
 
-    /* Header & nav (aligned with index/explore) */
+    /* Header & nav */
     .site-header {
       display: flex;
       justify-content: space-between;
@@ -239,6 +236,27 @@
       font-weight: 600;
     }
 
+    /* Author card */
+    .author-card {
+      margin-top: 8px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      background: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .author-name {
+      margin: 0 0 4px;
+      font-weight: 600;
+    }
+
+    .author-role {
+      margin: 0 0 6px;
+      font-size: 0.9rem;
+      color: #555555;
+    }
+
     footer.site-footer {
       text-align: center;
       padding: 16px;
@@ -276,7 +294,7 @@
     <header class="methods-header">
       <h1 class="methods-title">Methods</h1>
       <p class="methods-subtitle">
-        This page summarizes how the data were collected, processed, and analyzed to build
+        This page summarizes how the data was collected, processed, and analyzed to build
         the <strong>Narrative</strong> and <strong>Explore</strong> views of Morning Pulse.
         The goal is transparency: you can see how raw transcripts become interpretable visual stories.
       </p>
@@ -290,10 +308,11 @@
           <li><a href="#data">Data source</a></li>
           <li><a href="#preprocessing">Pre-processing</a></li>
           <li><a href="#sentiment">Sentiment analysis</a></li>
-          <li><a href="#topics">Topics & states</a></li>
+          <li><a href="#topics">Topics &amp; states</a></li>
           <li><a href="#behavior">Behavioral metrics</a></li>
           <li><a href="#visualization">Visualization design</a></li>
           <li><a href="#definitions">Key definitions</a></li>
+          <li><a href="#author">About the author</a></li>
         </ul>
         <p class="toc-note">
           The <span class="inline-pill">Narrative</span> tab focuses on a single conference.
@@ -574,6 +593,32 @@
                 a reference in the transcript to a Mexican state, identified through normalized string matching.
               </li>
             </ul>
+          </div>
+        </section>
+
+        <!-- Author -->
+        <section id="author">
+          <div class="section-label">08</div>
+          <h2 class="section-title">About the author</h2>
+          <div class="section-body">
+            <div class="author-card">
+              <p class="author-name">José Manuel Cardona Arias</p>
+              <p class="author-role">
+                M.S. Computational Analysis and Public Policy, University of Chicago
+              </p>
+              <p>
+                José is a data scientist focused on using machine learning and data visualization
+                to support public policy. His work has included projects on poverty measurement,
+                labor standards enforcement, and health analytics with partners such as
+                Innovations for Poverty Action and the Microsoft AI for Good Lab.
+              </p>
+              <p>
+                Morning Pulse was developed as part of a data visualization course at the
+                University of Chicago. The project reflects José’s broader interest in making
+                complex political communication more transparent, interpretable, and accessible
+                to the public.
+              </p>
+            </div>
           </div>
         </section>
 
