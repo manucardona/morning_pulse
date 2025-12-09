@@ -115,7 +115,7 @@ body {
   background: #ffffff;
   padding: 20px 22px;
   border-radius: 14px;
-  max-width: 520px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -179,12 +179,118 @@ body {
   pointer-events: none;
 }
 
+#pulse-caption {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #7a7a79;
+}
+
+#pulse-caption strong {
+  font-weight: 600;
+}
+
+/* Small horizontal legend under caption */
+#pulse-legend {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #7a7a79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#pulse-legend .legend-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: #545151;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 4px;
+  border-radius: 999px;
+}
+.legend-neg {
+  background: #C70039;  /* negative */
+}
+
+.legend-neu {
+  background: #888888;  /* neutral */
+}
+
+.legend-pos {
+  background: #4D88FF;  /* positive */
+}
+
+#pulse-caption.hidden {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 #pulse-svg {
   width: 100%;
   height: 100%;
 }
+.nav-btn {
+  margin-top: 18px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #1EA896;
+  background: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1EA896;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
 
-/* RESPONSIVE */
+.nav-btn:hover {
+  background: #1EA896;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.pulse-callout {
+  position: fixed; 
+  transform: translate(-50%, -110%); /* center horizontal*/
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #4F4F4D;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.pulse-callout.hidden {
+  opacity: 0;
+}
+
+.pulse-callout.visible {
+  opacity: 1;
+}
+
+
+/* RESPONSIVENESS */
 
 @media (max-width: 900px) {
   #scrolly {

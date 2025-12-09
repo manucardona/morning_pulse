@@ -6,7 +6,7 @@
     "silhouette": "img/president.png",
     "sentiment": 0.00,
     "context": "The President opens the morning conference with a calm greeting, setting a measured tone before any mention of the floods.",
-    "quote": "Muy buenos días. Vamos a iniciar."
+    "quote": "Buenos días. Buenos días ¿Cómo están?"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "silhouette": "img/president.png",
     "sentiment": -0.05,
     "context": "She announces that the entire session will be devoted to the flooding emergency across five states, signaling the gravity of the day.",
-    "quote": "Hoy dedicaremos toda la conferencia a informar sobre las afectaciones por las lluvias."
+    "quote": "Bueno, el día de hoy lo vamos a dedicar a informar sobre las afectaciones de las lluvias del jueves y viernes."
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "silhouette": "img/president.png",
     "sentiment": 0.25,
     "context": "The President introduces the lineup of federal officials who will report on damage, rescues, and response efforts.",
-    "quote": "Nos acompañan las y los titulares que encabezan los trabajos de apoyo."
+    "quote": "Están conectados los cinco gobernadores. Está conectada también Laura Velázquez, la coordinadora nacional de Protección Civil. Daría la información el General Ricardo Trevilla Trejo, secretario de la Defensa Nacional, de los apoyos que ha dado la Defensa y cuáles son los elementos y los apoyos desplegados en este momento."
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.80,
     "context": "Protección Civil opens with a grim tally of deaths and missing persons across Veracruz, Puebla, Hidalgo, Querétaro, and San Luis Potosí.",
-    "quote": "Registramos personas fallecidas y no localizadas en Veracruz, Puebla, Hidalgo, Querétaro y San Luis Potosí."
+    "quote": "Lamentamos informar a toda la población que en Veracruz tenemos el reporte de 29 personas fallecidas y 18 no localizadas."
   },
   {
     "id": 5,
@@ -69,7 +69,7 @@
     "silhouette": "img/official.png",
     "sentiment": 0.45,
     "context": "They explain how Poza Rica and Álamo were divided into sectors so teams could move block by block through flooded neighborhoods.",
-    "quote": "Dividimos la ciudad en sectores para acelerar los rescates."
+    "quote": "Dividimos la ciudad en sectores para acelerar los rescates. Hoy llega todo ese personal, maquinaria, equipo en refuerzo."
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.20,
     "context": "The Navy presents its own deployment: marines, aircraft, medical teams, and boats working across four states.",
-    "quote": "La Marina trabaja en saneamiento de colonias y evacuaciones médicas."
+    "quote": "Se está trabajando en el sector que nos asignaron para saneamiento de las colonias, calles, avenidas, limpieza de vías de comunicación y viviendas, recorridos de vigilancia, evacuaciones médicas en diferentes zonas alejadas con puentes aéreos."
   },
   {
     "id": 10,
@@ -96,7 +96,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.40,
     "context": "Infrastructure officials show maps of landslides, road cuts and damaged bridges across the federal road network.",
-    "quote": "Tenemos 132 interrupciones en la red carretera federal."
+    "quote": "Hubo 132 interrupciones en las carreteras federales, son más de mil 60 kilómetros, que se han atendido."
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.80,
     "context": "They describe stretches of highway ripped away by swollen rivers and hillside collapses, even as most routes are now reopened.",
-    "quote": "Hay tramos donde el pavimento fue totalmente levantado por el agua."
+    "quote": "Hay 32 puentes vehiculares con afectaciones en carreteras estatales, municipales y alimentadores que estamos… a medida que vamos entrando a las zonas, se estarán atendiendo."
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "silhouette": "img/official.png",
     "sentiment": 0.75,
     "context": "CFE reports that electricity has been restored to over 80% of affected users, offering a rare note of progress.",
-    "quote": "Hemos restablecido más del 80% del servicio eléctrico."
+    "quote": "Las y los usuarios afectados deben de tener la certeza que estamos atendiendo su solicitud, y estamos ocupados de que se restablezca pronto el servicio para que ellos puedan tener energía eléctrica en sus hogares."
   },
   {
     "id": 14,
@@ -132,7 +132,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.05,
     "context": "Health authorities describe hundreds of medical brigades providing care, vaccines, and basic medicines in flood-hit areas.",
-    "quote": "Realizamos acciones de vacunación, control de vectores y atención médica móvil."
+    "quote": "En vacunación quisiera decir que hemos desplazado recursos. También hemos realizado acciones de lavado de manos, cloración de agua y aplicación de abate y distribución de suero oral."
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.20,
     "context": "They warn about dengue risks and stagnant water, outlining vector control measures and long-term health monitoring.",
-    "quote": "Colocamos ovitrampas y realizamos nebulización en zonas críticas."
+    "quote": "En lo que tiene que ver con dengue, estamos listos para empezar la limpieza de las áreas afectadas para eliminar lodo y basura. Colocamos ovitrampas y realizamos nebulización en zonas críticas."
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.50,
     "context": "The governor of Veracruz reports massive human impact: hundreds of thousands affected, dozens of shelters, and widespread flooding.",
-    "quote": "Tenemos alrededor de 300 mil personas afectadas en el estado."
+    "quote": "Actualmente tenemos 40 municipios afectados. 6 municipios incomunicados. De estos 6 municipios, 81 comunidades continúan incomunicadas. 24 caminos cerrados, sin acceso."
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.95,
     "context": "Puebla’s governor lists deaths, missing persons and destroyed infrastructure, giving the disaster a human face.",
-    "quote": "Hemos registrado trece personas fallecidas y cuatro no localizadas."
+    "quote": "En Puebla hay 13 personas lamentablemente fallecidas. De 15 personas desaparecidas o no localizadas, ya solamente tenemos 4, ese es un dato importante."
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.98,
     "context": "Hidalgo reports dozens of roads cut, bridges collapsed and many people still unaccounted for.",
-    "quote": "Hay alrededor de 21 fallecidos y 43 personas aún no localizadas."
+    "quote": "Lamentablemente, 21 personas fallecidas, 43 personas no localizadas. 234 caminos afectados: 130 caminos cerrados, 87 caminos abiertos parcialmente, 17 caminos abiertos totalmente. 4 puentes colapsados."
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.35,
     "context": "Querétaro describes entire communities evacuated and key bridges washed away by swollen rivers.",
-    "quote": "Tuvimos que evacuar poblaciones completas durante la noche."
+    "quote": "Creo que hemos avanzado bastante bien. Y cuando usted dio la instrucción de que llegaran las máquinas de la Defensa Nacional, de la Secretaría de Infraestructura, la verdad es que ya se vio un cambio muy fuerte y bajamos de 108 comunidades a 30, ahorita."
   },
   {
     "id": 21,
@@ -186,7 +186,7 @@
     "silhouette": "img/official.png",
     "sentiment": -0.10,
     "context": "San Luis Potosí reports significant material damage but, unlike other states, no reported deaths so far.",
-    "quote": "No tenemos decesos que lamentar, pero sí daños importantes."
+    "quote": "Gracias a Dios, no tenemos ninguna defunción, no tenemos ninguna persona desaparecida, afortunadamente."
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "silhouette": "img/journalist.png",
     "sentiment": 0.14,
     "context": "After a long sequence of official reports, a journalist finally intervenes, asking what really happened.",
-    "quote": "Presidenta, ¿qué fue lo que pasó realmente?"
+    "quote": "¿qué fue lo que pasó, Presidenta?, ¿algo falló? La cantidad de muertos es bastante alta, por desgracia; también la cantidad de personas no localizadas. ¿No hubo alertas? ¿No se informó a tiempo a la población? ¿Usted no recibió la suficiente información? ¿Qué fue lo que pasó?"
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "silhouette": "img/journalist.png",
     "sentiment": -0.15,
     "context": "Another question probes whether early warning systems failed and if lives could have been saved with better prevention.",
-    "quote": "¿Fallaron los sistemas de prevención? ¿Se alertó a tiempo?"
+    "quote": "Esta herramienta, este documento que se tiene precisamente para prever muchas cosas, muchos estados y municipios lo desdeñan. Tal vez valdría la pena que esto fuera algo obligatorio."
   },
   {
     "id": 24,
@@ -222,7 +222,7 @@
     "silhouette": "img/journalist.png",
     "sentiment": -0.50,
     "context": "A journalist raises the previous day’s confrontation in Poza Rica, where residents angrily confronted the President.",
-    "quote": "Ayer hubo reclamos en Poza Rica por la tardanza de los apoyos."
+    "quote": "Presidenta, ayer en la visita que hizo a varias de las comunidades afectadas, particularmente en Poza Rica, hubo ahí, la confrontaron, hubo algunos reclamos de la gente."
   },
   {
     "id": 26,
@@ -231,7 +231,7 @@
     "silhouette": "img/president.png",
     "sentiment": 0.10,
     "context": "The President acknowledges people’s anger and anxiety, emphasizing that more help is being sent and that no one will be abandoned.",
-    "quote": "Entendemos la preocupación. Nadie quedará sin apoyo."
+    "quote": "Evidentemente, en una circunstancia así, la gente lo que requiere es apoyo. Entonces, a partir del día de hoy, por eso dispusimos que llegara más apoyo."
   },
   {
     "id": 27,
@@ -249,7 +249,7 @@
     "silhouette": "img/president.png",
     "sentiment": 0.65,
     "context": "She reframes the narrative, highlighting the generosity and solidarity of ordinary people over partisan attacks.",
-    "quote": "La generosidad del pueblo es más fuerte que cualquier discordia."
+    "quote": "Ese es el pueblo de México. Esa es la generosidad."
   },
   {
     "id": 29,

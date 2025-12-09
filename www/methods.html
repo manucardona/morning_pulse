@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Morning Pulse – Methods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Libre Franklin (same family as main narrative) -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- If you have a global stylesheet, keep this: -->
+  <!-- <link rel="stylesheet" href="main.css" /> -->
+
+  <style>
+    :root {
+      --accent: #9B2915;
+      --bg: #f7f7f7;
+      --text: #333333;
+      --border: #e2e2e2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Libre Franklin", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Header & nav (aligned with index/explore) */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-brand a {
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .site-nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #555555;
+    }
+
+    .site-nav a.active {
+      font-weight: 600;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+      color: var(--text);
+    }
+
+    main#methods {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .methods-header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .methods-title {
+      margin: 0 0 6px;
+      font-size: 1.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .methods-subtitle {
+      margin: 0;
+      font-size: 0.98rem;
+      max-width: 640px;
+      opacity: 0.85;
+    }
+
+    /* Layout: two main columns on desktop */
+    .methods-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 260px) 1fr;
+      gap: 32px;
+      margin-top: 28px;
+    }
+
+    /* Sidebar / TOC */
+    .methods-sidebar {
+      font-size: 0.9rem;
+      position: sticky;
+      top: 72px;
+      align-self: flex-start;
+    }
+
+    .sidebar-title {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      margin: 0 0 8px;
+      color: #777777;
+    }
+
+    .methods-toc {
+      list-style: none;
+      margin: 0 0 16px;
+      padding: 0;
+    }
+
+    .methods-toc li + li {
+      margin-top: 4px;
+    }
+
+    .methods-toc a {
+      text-decoration: none;
+      color: #555555;
+      font-size: 0.9rem;
+    }
+
+    .methods-toc a:hover {
+      color: var(--accent);
+    }
+
+    .toc-note {
+      font-size: 0.8rem;
+      color: #777777;
+      margin-top: 10px;
+    }
+
+    /* Main content sections */
+    .methods-content section {
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .methods-content section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: #777777;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .section-body {
+      font-size: 0.95rem;
+    }
+
+    .section-body p {
+      margin: 0 0 10px;
+    }
+
+    .section-body ul {
+      margin: 4px 0 10px 1.2rem;
+      padding: 0;
+    }
+
+    .section-body li {
+      margin-bottom: 4px;
+    }
+
+    .inline-pill {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 999px;
+      border: 1px solid #dddddd;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      vertical-align: middle;
+      color: #555555;
+      background: #ffffff;
+    }
+
+    /* Simple pipeline diagram */
+    .pipeline {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px dashed #d4d4d4;
+      background: #ffffff;
+      font-size: 0.86rem;
+    }
+
+    .pipeline-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pipeline-step {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f0f0f0;
+      font-size: 0.78rem;
+    }
+
+    .pipeline-arrow {
+      font-size: 0.85rem;
+      color: #999999;
+    }
+
+    /* Definition list */
+    .definitions-list {
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.92rem;
+    }
+
+    .definitions-list li {
+      margin-bottom: 6px;
+    }
+
+    .def-term {
+      font-weight: 600;
+    }
+
+    footer.site-footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.8rem;
+      color: #777777;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      .methods-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .methods-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-brand">
+      <a href="index.html">Morning Pulse</a>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Narrative</a>
+      <a href="explore.html">Explore</a>
+      <a href="methods.html" class="active">Methods</a>
+    </nav>
+  </header>
+
+  <main id="methods">
+    <header class="methods-header">
+      <h1 class="methods-title">Methods</h1>
+      <p class="methods-subtitle">
+        This page summarizes how the data were collected, processed, and analyzed to build
+        the <strong>Narrative</strong> and <strong>Explore</strong> views of Morning Pulse.
+        The goal is transparency: you can see how raw transcripts become interpretable visual stories.
+      </p>
+    </header>
+
+    <div class="methods-layout">
+      <!-- Sidebar / TOC -->
+      <aside class="methods-sidebar">
+        <p class="sidebar-title">On this page</p>
+        <ul class="methods-toc">
+          <li><a href="#data">Data source</a></li>
+          <li><a href="#preprocessing">Pre-processing</a></li>
+          <li><a href="#sentiment">Sentiment analysis</a></li>
+          <li><a href="#topics">Topics & states</a></li>
+          <li><a href="#behavior">Behavioral metrics</a></li>
+          <li><a href="#visualization">Visualization design</a></li>
+          <li><a href="#definitions">Key definitions</a></li>
+        </ul>
+        <p class="toc-note">
+          The <span class="inline-pill">Narrative</span> tab focuses on a single conference.
+          The <span class="inline-pill">Explore</span> tab lets you compare many of them.
+        </p>
+      </aside>
+
+      <!-- Main content -->
+      <div class="methods-content">
+
+        <!-- Data -->
+        <section id="data">
+          <div class="section-label">01</div>
+          <h2 class="section-title">Data source</h2>
+          <div class="section-body">
+            <p>
+              Morning Pulse uses official transcripts of Mexican presidential press conferences
+              (&ldquo;mañaneras&rdquo;) and related public messages published on the
+              <em>Presidencia de México</em> website.
+            </p>
+            <p>
+              Each record in the raw JSON includes:
+            </p>
+            <ul>
+              <li><strong>Date</strong> (in Spanish, e.g. <em>&ldquo;jueves, 16 de octubre de 2025&rdquo;</em>)</li>
+              <li><strong>Title</strong> of the speech or conference</li>
+              <li><strong>URL</strong> pointing to the original page</li>
+              <li><strong>Transcript</strong>: a list of paragraphs, each optionally tagged with a speaker name</li>
+            </ul>
+            <p>
+              The raw JSON is flattened and transformed into a tabular format before any analysis is performed.
+            </p>
+
+            <div class="pipeline">
+              <strong>Data pipeline (overview)</strong>
+              <div class="pipeline-row" style="margin-top:6px;">
+                <span class="pipeline-step">Official web pages</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="pipeline-step">Raw JSON (date, title, url, transcript)</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="pipeline-step">Flattened interventions</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="pipeline-step">Analysis &amp; visualization</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pre-processing -->
+        <section id="preprocessing">
+          <div class="section-label">02</div>
+          <h2 class="section-title">Pre-processing</h2>
+          <div class="section-body">
+            <p>
+              Before any modeling, the transcripts go through several cleaning and normalization steps
+              implemented in Python.
+            </p>
+            <ul>
+              <li>
+                <strong>Date parsing:</strong>
+                Spanish dates (e.g., <em>&ldquo;jueves, 16 de octubre de 2025Fecha de publicación&rdquo;</em>)
+                are cleaned and converted into standard <code>YYYY-MM-DD</code> values.
+              </li>
+              <li>
+                <strong>Transcript flattening:</strong>
+                Each paragraph in the transcript becomes one <em>intervention</em>, preserving the original order.
+                The result is a table with columns like <code>date</code>, <code>title</code>, <code>url</code>,
+                <code>speaker</code>, and <code>text</code>.
+              </li>
+              <li>
+                <strong>Speaker normalization:</strong>
+                Raw speaker labels (e.g. <em>&ldquo;PRESIDENTA DE MÉXICO, CLAUDIA SHEINBAUM PARDO:&rdquo;</em>,
+                <em>&ldquo;SECRETARIO DE…&rdquo;</em>, <em>&ldquo;PREGUNTA&rdquo;</em>) are standardized using
+                regular expressions. The goal is to group them into consistent categories:
+                <em>President</em>, <em>officials</em>, <em>journalists</em>, and others.
+              </li>
+              <li>
+                <strong>Role grouping:</strong>
+                For analysis and visualization, normalized speakers are grouped into broader
+                <em>speaker groups</em>:
+                <code>President/Official</code> vs. <code>Journalist</code>.
+              </li>
+            </ul>
+
+            <div class="pipeline">
+              <strong>From transcript to interventions</strong>
+              <div class="pipeline-row" style="margin-top:6px;">
+                <span class="pipeline-step">Raw transcript</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="pipeline-step">Paragraph-level rows</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="pipeline-step">Clean speaker labels</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="pipeline-step">Speaker groups</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sentiment -->
+        <section id="sentiment">
+          <div class="section-label">03</div>
+          <h2 class="section-title">Sentiment analysis</h2>
+          <div class="section-body">
+            <p>
+              Sentiment is estimated with a Spanish transformer model from the
+              <code>pysentimiento</code> library. For each intervention, the model outputs probabilities
+              for three labels: <strong>positive (POS)</strong>, <strong>neutral (NEU)</strong>,
+              and <strong>negative (NEG)</strong>.
+            </p>
+            <p>
+              Instead of only using discrete labels, Morning Pulse computes a
+              <strong>continuous sentiment score</strong>:
+            </p>
+            <p style="margin-left:1.2rem;font-size:0.9rem;">
+              <code>sentiment_score = P(POS) − P(NEG)</code> &nbsp; ∈ &nbsp; [−1, 1]
+            </p>
+            <ul>
+              <li><strong>+1</strong> means very likely positive</li>
+              <li><strong>0</strong> means balanced or neutral</li>
+              <li><strong>−1</strong> means very likely negative</li>
+            </ul>
+            <p>
+              To reduce noise, the score is smoothed with a <strong>rolling average</strong> over several
+              consecutive interventions, computed separately for each speaker group (President/Official vs. Journalist).
+              This smoothed score is what you see in the
+              <span class="inline-pill">Sentiment over time</span> chart in the Explore tab, and what drives
+              the background pulse line in the Narrative view.
+            </p>
+          </div>
+        </section>
+
+        <!-- Topics & states -->
+        <section id="topics">
+          <div class="section-label">04</div>
+          <h2 class="section-title">Topics &amp; states</h2>
+          <div class="section-body">
+            <p>
+              Morning Pulse uses two complementary approaches to understand <em>what</em> each conference is about.
+            </p>
+            <ul>
+              <li>
+                <strong>Dictionary-based topics:</strong>
+                Keywords in Spanish are grouped into broad themes like
+                <em>education</em>, <em>migration</em>, <em>poverty</em>, <em>health</em>,
+                <em>security</em>, and <em>environment</em>.
+                The share of words matching each dictionary is computed daily and then aggregated weekly.
+              </li>
+              <li>
+                <strong>BERTopic clustering:</strong>
+                To avoid relying only on pre-defined words, interventions are also clustered using the
+                <code>BERTopic</code> algorithm. It combines sentence embeddings, dimensionality reduction,
+                and clustering to discover recurring semantic topics directly from the text.
+              </li>
+            </ul>
+            <p>
+              For each conference, the Explore tab displays its <strong>most frequent BERTopic topics</strong>
+              using simplified human-readable labels.
+            </p>
+            <p>
+              In addition, the model tracks <strong>mentions of Mexican states</strong>, using normalized matching
+              for state names (e.g. <em>“Veracruz”</em>, <em>“San Luis Potosí”</em>, <em>“Chiapas”</em>).
+              The <span class="inline-pill">Top 5 States mentioned</span> chart shows which places are most visible
+              in a given conference.
+            </p>
+          </div>
+        </section>
+
+        <!-- Behavioral metrics -->
+        <section id="behavior">
+          <div class="section-label">05</div>
+          <h2 class="section-title">Behavioral metrics</h2>
+          <div class="section-body">
+            <p>
+              Beyond text content, Morning Pulse also summarizes how the conversation behaves:
+              who speaks, for how long, and how the dialogue flows.
+            </p>
+            <ul>
+              <li>
+                <strong>Conference length:</strong>
+                The total number of words spoken in a conference, aggregating all interventions.
+              </li>
+              <li>
+                <strong>Turn-taking structure:</strong>
+                The number of interventions from the President vs. journalists, both overall and
+                after the first journalist question, to focus on the interactive portion of the session.
+              </li>
+              <li>
+                <strong>Words by role:</strong>
+                Total words spoken per day for each speaker group (President/Official vs. Journalist),
+                used to understand how much space each side occupies.
+              </li>
+              <li>
+                <strong>Timing within the conference:</strong>
+                Interventions are indexed in order, which makes it possible to plot sentiment over the
+                course of the conference, highlighting shifts in tone across the interaction.
+              </li>
+            </ul>
+            <p>
+              All these metrics are computed in Python and then stored in a compact JSON file used by the
+              Explore tab: <code>explore_data.json</code>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Visualization design -->
+        <section id="visualization">
+          <div class="section-label">06</div>
+          <h2 class="section-title">Narrative &amp; visualization design</h2>
+          <div class="section-body">
+            <p>
+              The site combines two complementary interfaces built with web technologies:
+            </p>
+            <ul>
+              <li>
+                <strong>Narrative tab:</strong>
+                A scroll-driven story based on a single conference. It uses D3 and Scrollama to
+                synchronize text steps with a &ldquo;pulse line&rdquo; and speaker silhouettes.
+                As the user scrolls, the visualization highlights key moments, changes in tone,
+                and shifts between speakers.
+              </li>
+              <li>
+                <strong>Explore tab:</strong>
+                An interactive dashboard where users can select any conference and inspect:
+                smoothed sentiment over time, states mentioned, and most frequent topics.
+                The page reads from <code>explore_data.json</code>, which centralizes the
+                pre-computed metrics.
+              </li>
+            </ul>
+            <p>
+              The visual design emphasizes a minimal layout, a limited color palette, and clear labels
+              over heavy ornamentation, so that users can focus on the conversation and its structure.
+            </p>
+          </div>
+        </section>
+
+        <!-- Definitions -->
+        <section id="definitions">
+          <div class="section-label">07</div>
+          <h2 class="section-title">Key definitions</h2>
+          <div class="section-body">
+            <ul class="definitions-list">
+              <li>
+                <span class="def-term">Intervention:</span>
+                one paragraph or turn in the transcript, spoken by a single speaker.
+              </li>
+              <li>
+                <span class="def-term">Speaker group:</span>
+                a broad category that groups individual speakers into
+                <em>President/Official</em> or <em>Journalist</em>, based on normalized labels.
+              </li>
+              <li>
+                <span class="def-term">Sentiment label:</span>
+                the discrete output of the sentiment model: Positive, Neutral, or Negative.
+              </li>
+              <li>
+                <span class="def-term">Sentiment score:</span>
+                a continuous value between −1 and 1, computed as
+                <code>P(POS) − P(NEG)</code>, representing how positive or negative an intervention is.
+              </li>
+              <li>
+                <span class="def-term">Rolling average:</span>
+                a smoothed series where each point is the average of several neighboring interventions,
+                used to reduce noise in the sentiment line.
+              </li>
+              <li>
+                <span class="def-term">Topic:</span>
+                a cluster of semantically similar interventions discovered using BERTopic, or a
+                dictionary-based theme defined by sets of keywords.
+              </li>
+              <li>
+                <span class="def-term">Turn-taking ratio:</span>
+                the ratio of the number of interventions from the President to those from journalists,
+                especially after the first journalist question, to capture the interactive part of the session.
+              </li>
+              <li>
+                <span class="def-term">State mention:</span>
+                a reference in the transcript to a Mexican state, identified through normalized string matching.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Morning Pulse</p>
+  </footer>
+</body>
+</html>

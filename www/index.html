@@ -23,7 +23,7 @@
     <div class="nav-links">
       <a href="index.html" class="active">Narrative</a>
       <a href="/explore.html">Explore</a>
-      <a href="/howto.html">Methods</a>
+      <a href="/methods.html">Methods</a>
     </div>
   </nav>
 
@@ -35,17 +35,20 @@
   <!-- MAIN CONTAINER -->
   <main id="scrolly">
 
-    <!-- FIXED VISUAL AREA -->
+    <!-- FIXED AREA -->
     <section id="graphic">
 
-      <h1 class="headline">Inside the Dialogue of a Morning Press Conference</h1>
+      <h1 class="headline">Inside the Dialogue of a Mañanera</h1>
       <p class="dek">
-        A moment-by-moment reconstruction of a single press conference, 
-        tracing how the tone shifts as the President, officials, 
-        and journalists speak.
+        This narrative replays one extraordinary mañanera, where the President, 
+        federal officials, and the press confronted the scale of the flooding that 
+        struck five states. Each step shows how the tone and words 
+        shifted as new information emerged. The pulse line beneath the story acts as the 
+        briefing’s heartbeat, surging with hope, steadying in neutrality, and sinking when 
+        the gravity of the disaster comes into focus.
       </p>
       <p class="dek">
-        Scroll down to follow the conversation unfold.
+        Scroll down or click Next to follow the briefing as it happened.
       </p>
 
       <div id="speaker-wrapper">
@@ -59,6 +62,30 @@
       <div id="quote-box">
         <p id="context-text" class="context-text">Loading…</p>
         <p id="quote-text">“ ”</p>
+      </div>
+
+      <div id="pulse-caption">
+        <strong>Sentiment pulse:</strong> the line in the background rises for more positive tone and falls for more negative tone during each intervention.
+      </div>
+
+      <div id="pulse-legend">
+        <span class="legend-label">Line color:</span>
+        <span class="legend-item">
+            <span class="legend-swatch legend-neg"></span> Negative
+        </span>
+        <span class="legend-item">
+            <span class="legend-swatch legend-neu"></span> Neutral
+        </span>
+        <span class="legend-item">
+            <span class="legend-swatch legend-pos"></span> Positive
+        </span>
+      </div>
+
+      <button id="next-step-btn" class="nav-btn">
+        Next ▸
+      </button>
+
+      <div id="pulse-callout" class="pulse-callout hidden">
       </div>
 
     </section>
